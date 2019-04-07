@@ -4,7 +4,7 @@ import argparse
 
 parser = argparse.ArgumentParser(description='omdb')
 parser.add_argument('--movie', default=os.environ.get('movie', "mad max"))
-parser.add_argument('--key')
+parser.add_argument('--key', default=os.environ.get('key', None))
 args = parser.parse_args()
 if not args.key:
     exit(parser.print_usage())
